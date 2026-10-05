@@ -1,0 +1,47 @@
+DEAD SIGNAL — REFINEMENT UPDATE
+GitHub Pages package: share/DeadSignalSandbox-Refinement-GitHub-Pages.zip
+Extract and upload every file to the same publishing folder as before.
+Keep the .gzpart files unchanged. Hard-refresh after deployment.
+Existing wilderness browser saves remain compatible.
+
+SOUND
+58 new sound effects and variants use layered impacts, scrapes and rustling.
+Six soil and six wood footsteps; four robot and four humanoid footfalls.
+No consecutive repetition of player footstep variants.
+Robot footsteps are quieter and attenuate with distance.
+Positional one-shot sounds behind walls are reduced by 10 dB.
+A fixed voice pool and peak limiter prevent runaway overlap.
+Music/Effects/Ambience volume controls remain independent.
+
+MOVEMENT AND LIGHT
+Measured step height replaces the fixed 42 cm upward shove.
+Camera compensation eases ledge ascent; ordinary hills use normal floor motion.
+Reduced head bob and constant uphill walking speed.
+Flashlight reaches 38 m, casts shadows, has a softer edge and warmer tint.
+Low battery dims smoothly without flashing. F toggles; J uses battery packs.
+
+PATROLS
+Scheduled inspections visit existing shelters/camps and scan three nearby points.
+Occupancy accumulates in 24 m areas; brief visits are ignored.
+After roughly four minutes, an area becomes eligible for an activity inspection.
+Heat slowly decays after departure. An inspected hot area gets a five-minute cooldown.
+Dogs search the area, not a continuously tracked player position.
+Inspections use the normal sight/hearing rules and can turn into pursuit.
+The inspection dispatcher won't add patrols when three machines are already active.
+Occupied-area pressure continues even around a claimed shelter.
+
+POWERED WORKBENCH
+At a workbench, scroll to Upgrade this workbench.
+Cost: 12 scrap + 3 circuits, paid once per station.
+The upgraded station needs a running claimed generator within 30 m.
+The crafting screen shows ONLINE or OFFLINE.
+Grenades, mines and battery packs require the upgraded powered station.
+A small station indicator changes color with upgrade/power state.
+Existing crafted workbenches can be upgraded too.
+Upgrades persist through saves, including after dismantling other buildings.
+
+VERIFICATION
+20 focused automated checks passed: stepping, hills, foley selection,
+inspection routing, occupancy thresholds/cooldown, powered crafting and save/load.
+Existing user save was backed up and restored around automated tests.
+Source/audio backup: backups/before-refinement-*.

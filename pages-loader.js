@@ -1,7 +1,7 @@
 // Static hosting: reconstruct and decompress the engine/content without special server headers.
 (() => {
  const nativeFetch=window.fetch.bind(window);
- const files={"index.wasm": {"parts": ["index.wasm.226253b149c3.00.gzpart"], "size": 35376909, "type": "application/wasm"}, "index.pck": {"parts": ["index.pck.cf80e9690414.00.gzpart", "index.pck.cf80e9690414.01.gzpart"], "size": 29614720, "type": "application/octet-stream"}};
+ const files={"index.wasm": {"parts": ["index.wasm.226253b149c3.00.gzpart"], "size": 35376909, "type": "application/wasm"}, "index.pck": {"parts": ["index.pck.4527e2fb80a5.00.gzpart", "index.pck.4527e2fb80a5.01.gzpart"], "size": 31673792, "type": "application/octet-stream"}};
  window.fetch=async(input,options)=>{
   const url=new URL(input instanceof Request?input.url:input,document.baseURI);
   const key=Object.keys(files).find(k=>url.href.split('?')[0]===new URL(k,document.baseURI).href);
